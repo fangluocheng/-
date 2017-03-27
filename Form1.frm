@@ -77,17 +77,19 @@ Begin VB.Form Form1
       Top             =   2880
       Width           =   615
    End
-   Begin VB.CommandButton num6 
+   Begin VB.CommandButton num1 
       Caption         =   "6"
       Height          =   735
+      Index           =   6
       Left            =   5400
       TabIndex        =   15
       Top             =   2880
       Width           =   615
    End
-   Begin VB.CommandButton num3 
+   Begin VB.CommandButton num1 
       Caption         =   "3"
       Height          =   735
+      Index           =   3
       Left            =   5400
       TabIndex        =   14
       Top             =   3960
@@ -110,17 +112,19 @@ Begin VB.Form Form1
       Top             =   5160
       Width           =   1575
    End
-   Begin VB.CommandButton num2 
+   Begin VB.CommandButton num1 
       Caption         =   "2"
       Height          =   735
+      Index           =   2
       Left            =   4440
       TabIndex        =   12
       Top             =   3960
       Width           =   615
    End
-   Begin VB.CommandButton num5 
+   Begin VB.CommandButton num1 
       Caption         =   "5"
       Height          =   735
+      Index           =   5
       Left            =   4440
       TabIndex        =   11
       Top             =   2880
@@ -137,14 +141,16 @@ Begin VB.Form Form1
    Begin VB.CommandButton num1 
       Caption         =   "1"
       Height          =   735
+      Index           =   1
       Left            =   3480
       TabIndex        =   9
       Top             =   3960
       Width           =   615
    End
-   Begin VB.CommandButton num4 
+   Begin VB.CommandButton num1 
       Caption         =   "4"
       Height          =   735
+      Index           =   4
       Left            =   3480
       TabIndex        =   8
       Top             =   2880
@@ -167,25 +173,28 @@ Begin VB.Form Form1
       Top             =   1800
       Width           =   615
    End
-   Begin VB.CommandButton num9 
+   Begin VB.CommandButton num1 
       Caption         =   "9"
       Height          =   735
+      Index           =   9
       Left            =   5400
       TabIndex        =   6
       Top             =   1800
       Width           =   615
    End
-   Begin VB.CommandButton num8 
+   Begin VB.CommandButton num1 
       Caption         =   "8"
       Height          =   735
+      Index           =   8
       Left            =   4440
       TabIndex        =   5
       Top             =   1800
       Width           =   615
    End
-   Begin VB.CommandButton num7 
+   Begin VB.CommandButton num1 
       Caption         =   "7"
       Height          =   735
+      Index           =   7
       Left            =   3480
       TabIndex        =   4
       Top             =   1800
@@ -442,38 +451,11 @@ Private Sub num0_Click()
     End If
 End Sub
 
-Private Sub num1_Click()
-    Text1.Text = Text1.Text & "1"
+Private Sub num1_Click(Index As Integer)
+    If Text1.Text = "" Then
+    Text1.Text = Str(Index)
+    Else
+    Text1.Text = Text1.Text + Str(Index)
+    End If
 End Sub
 
-Private Sub num2_Click()
-    Text1.Text = Text1.Text & "2"
-End Sub
-
-Private Sub num3_Click()
-    Text1.Text = Text1.Text & "3"
-End Sub
-
-Private Sub num4_Click()
-    Text1.Text = Text1.Text & "4"
-End Sub
-
-Private Sub num5_Click()
-    Text1.Text = Text1.Text & "5"
-End Sub
-
-Private Sub num6_Click()
-    Text1.Text = Text1.Text & "6"
-End Sub
-
-Private Sub num7_Click()
-    Text1.Text = Text1.Text & "7"
-End Sub
-
-Private Sub num8_Click()
-    Text1.Text = Text1.Text & "8"
-End Sub
-
-Private Sub num9_Click()
-    Text1.Text = Text1.Text & "9"
-End Sub
