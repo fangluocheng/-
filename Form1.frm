@@ -1,13 +1,13 @@
 VERSION 5.00
 Begin VB.Form Form1 
    Caption         =   "¼ÆËãÆ÷"
-   ClientHeight    =   7965
+   ClientHeight    =   6645
    ClientLeft      =   60
    ClientTop       =   450
-   ClientWidth     =   14550
+   ClientWidth     =   10470
    LinkTopic       =   "Form1"
-   ScaleHeight     =   7965
-   ScaleWidth      =   14550
+   ScaleHeight     =   6645
+   ScaleWidth      =   10470
    StartUpPosition =   3  'Windows Default
    Begin VB.CommandButton cmdeq 
       Caption         =   "="
