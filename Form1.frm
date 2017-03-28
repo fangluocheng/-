@@ -1,13 +1,13 @@
 VERSION 5.00
 Begin VB.Form Form1 
    Caption         =   "计算器"
-   ClientHeight    =   6645
+   ClientHeight    =   5610
    ClientLeft      =   60
    ClientTop       =   450
-   ClientWidth     =   10470
+   ClientWidth     =   4560
    LinkTopic       =   "Form1"
-   ScaleHeight     =   6645
-   ScaleWidth      =   10470
+   ScaleHeight     =   5610
+   ScaleWidth      =   4560
    StartUpPosition =   3  'Windows Default
    Begin VB.CommandButton cmdeq 
       Caption         =   "="
@@ -21,9 +21,9 @@ Begin VB.Form Form1
          Strikethrough   =   0   'False
       EndProperty
       Height          =   735
-      Left            =   7320
+      Left            =   3240
       TabIndex        =   19
-      Top             =   5160
+      Top             =   4560
       Width           =   615
    End
    Begin VB.CommandButton cmdchu 
@@ -38,9 +38,9 @@ Begin VB.Form Form1
          Strikethrough   =   0   'False
       EndProperty
       Height          =   735
-      Left            =   6360
+      Left            =   2520
       TabIndex        =   18
-      Top             =   5160
+      Top             =   4560
       Width           =   615
    End
    Begin VB.CommandButton cmdcheng 
@@ -55,9 +55,9 @@ Begin VB.Form Form1
          Strikethrough   =   0   'False
       EndProperty
       Height          =   735
-      Left            =   6360
+      Left            =   2520
       TabIndex        =   17
-      Top             =   3960
+      Top             =   3360
       Width           =   615
    End
    Begin VB.CommandButton cmdjian 
@@ -72,27 +72,27 @@ Begin VB.Form Form1
          Strikethrough   =   0   'False
       EndProperty
       Height          =   735
-      Left            =   6360
+      Left            =   2520
       TabIndex        =   16
-      Top             =   2880
+      Top             =   2280
       Width           =   615
    End
    Begin VB.CommandButton num1 
       Caption         =   "6"
       Height          =   735
       Index           =   6
-      Left            =   5400
+      Left            =   1800
       TabIndex        =   15
-      Top             =   2880
+      Top             =   2280
       Width           =   615
    End
    Begin VB.CommandButton num1 
       Caption         =   "3"
       Height          =   735
       Index           =   3
-      Left            =   5400
+      Left            =   1800
       TabIndex        =   14
-      Top             =   3960
+      Top             =   3360
       Width           =   615
    End
    Begin VB.CommandButton Command10 
@@ -107,53 +107,54 @@ Begin VB.Form Form1
          Strikethrough   =   0   'False
       EndProperty
       Height          =   735
-      Left            =   4440
+      Left            =   1080
       TabIndex        =   13
-      Top             =   5160
-      Width           =   1575
+      Top             =   4560
+      Width           =   1335
    End
    Begin VB.CommandButton num1 
       Caption         =   "2"
       Height          =   735
       Index           =   2
-      Left            =   4440
+      Left            =   1080
       TabIndex        =   12
-      Top             =   3960
+      Top             =   3360
       Width           =   615
    End
    Begin VB.CommandButton num1 
       Caption         =   "5"
       Height          =   735
       Index           =   5
-      Left            =   4440
+      Left            =   1080
       TabIndex        =   11
-      Top             =   2880
+      Top             =   2280
       Width           =   615
    End
-   Begin VB.CommandButton num0 
+   Begin VB.CommandButton num1 
       Caption         =   "0"
       Height          =   735
-      Left            =   3480
+      Index           =   0
+      Left            =   360
       TabIndex        =   10
-      Top             =   5160
+      Top             =   4560
       Width           =   615
    End
    Begin VB.CommandButton num1 
       Caption         =   "1"
       Height          =   735
       Index           =   1
-      Left            =   3480
+      Left            =   360
       TabIndex        =   9
-      Top             =   3960
+      Top             =   3360
       Width           =   615
    End
    Begin VB.CommandButton num1 
       Caption         =   "4"
       Height          =   735
       Index           =   4
-      Left            =   3480
+      Left            =   360
       TabIndex        =   8
-      Top             =   2880
+      Top             =   2280
       Width           =   615
    End
    Begin VB.CommandButton cmdjia 
@@ -168,67 +169,67 @@ Begin VB.Form Form1
          Strikethrough   =   0   'False
       EndProperty
       Height          =   735
-      Left            =   6360
+      Left            =   2520
       TabIndex        =   7
-      Top             =   1800
+      Top             =   1200
       Width           =   615
    End
    Begin VB.CommandButton num1 
       Caption         =   "9"
       Height          =   735
       Index           =   9
-      Left            =   5400
+      Left            =   1800
       TabIndex        =   6
-      Top             =   1800
+      Top             =   1200
       Width           =   615
    End
    Begin VB.CommandButton num1 
       Caption         =   "8"
       Height          =   735
       Index           =   8
-      Left            =   4440
+      Left            =   1080
       TabIndex        =   5
-      Top             =   1800
+      Top             =   1200
       Width           =   615
    End
    Begin VB.CommandButton num1 
       Caption         =   "7"
       Height          =   735
       Index           =   7
-      Left            =   3480
+      Left            =   360
       TabIndex        =   4
-      Top             =   1800
+      Top             =   1200
       Width           =   615
    End
    Begin VB.TextBox Text1 
       Height          =   735
-      Left            =   3600
+      Left            =   480
       TabIndex        =   3
-      Top             =   960
-      Width           =   4215
+      Top             =   360
+      Width           =   3255
    End
    Begin VB.CommandButton cmdExit 
       Caption         =   "退出"
       Height          =   735
-      Left            =   7320
+      Left            =   3240
       TabIndex        =   2
-      Top             =   1800
+      Top             =   1200
       Width           =   615
    End
    Begin VB.CommandButton cmdBack 
       Caption         =   "取消"
       Height          =   735
-      Left            =   7320
+      Left            =   3240
       TabIndex        =   1
-      Top             =   3960
+      Top             =   3360
       Width           =   615
    End
    Begin VB.CommandButton cmdDEL 
       Caption         =   "清除"
       Height          =   735
-      Left            =   7320
+      Left            =   3240
       TabIndex        =   0
-      Top             =   2880
+      Top             =   2280
       Width           =   615
    End
 End
@@ -445,17 +446,22 @@ End Sub
 
 Private Sub num0_Click()
     If Text1.Text = "" Then
-    Text1.Text = ""
+        Text1.Text = "0"
     Else
-    Text1.Text = Text1.Text & "0"
+        Text1.Text = Text1.Text & "0"
     End If
 End Sub
 
 Private Sub num1_Click(Index As Integer)
     If Text1.Text = "" Then
-    Text1.Text = Str(Index)
+        'MsgBox "0"
+        Text1.Text = CStr(Index)
+    ElseIf Trim(Text1.Text) = "0" Then
+        'MsgBox "1"
+        Text1.Text = Text1.Text & ""
     Else
-    Text1.Text = Text1.Text + Str(Index)
+        'MsgBox "2"
+        Text1.Text = Text1.Text + CStr(Index)
     End If
 End Sub
 
