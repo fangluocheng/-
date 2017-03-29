@@ -238,106 +238,104 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
-
-
 Sub Run1()
-Dim x() As String
-Dim c As Integer
-Dim q As Double
-c = Len(Text1.Text)
-Text1.Text = Left(Text1.Text, c - 1)
-x = Split(Text1.Text, "+")
-q = Val(x(0)) + Val(x(1))
-Text1.Text = Text1.Text & "=" & q
+    Dim x() As String
+    Dim c As Integer
+    Dim q As Double
+    c = Len(Text1.Text)
+    Text1.Text = Left(Text1.Text, c - 1)
+    x = Split(Text1.Text, "+")
+    q = Val(x(0)) + Val(x(1))
+    Text1.Text = Text1.Text & "=" & q
 End Sub
 
 Sub Run2()
-Dim x() As String
-Dim c As Integer
-Dim q As Double
-c = Len(Text1.Text)
-Text1.Text = Left(Text1.Text, c - 1)
-x = Split(Text1.Text, "-")
-q = Val(x(0)) - Val(x(1))
-Text1.Text = Text1.Text & "=" & q
+    Dim x() As String
+    Dim c As Integer
+    Dim q As Double
+    c = Len(Text1.Text)
+    Text1.Text = Left(Text1.Text, c - 1)
+    x = Split(Text1.Text, "-")
+    q = Val(x(0)) - Val(x(1))
+    Text1.Text = Text1.Text & "=" & q
 End Sub
 
 Sub Run3()
-Dim x() As String
-Dim c As Integer
-Dim q As Double
-c = Len(Text1.Text)
-Text1.Text = Left(Text1.Text, c - 1)
-x = Split(Text1.Text, "*")
-q = Val(x(0)) * Val(x(1))
-Text1.Text = Text1.Text & "=" & q
+    Dim x() As String
+    Dim c As Integer
+    Dim q As Double
+    c = Len(Text1.Text)
+    Text1.Text = Left(Text1.Text, c - 1)
+    x = Split(Text1.Text, "*")
+    q = Val(x(0)) * Val(x(1))
+    Text1.Text = Text1.Text & "=" & q
 End Sub
 
 Sub Run4()
-Dim x() As String
-Dim c As Integer
-Dim q As Double
-c = Len(Text1.Text)
-Text1.Text = Left(Text1.Text, c - 1)
-x = Split(Text1.Text, "/")
-If Val(x(1)) = 0 Then
-Text1.Text = "分母不能为0"
-Else
-q = Val(x(0)) / Val(x(1))
-Text1.Text = Text1.Text & "=" & q
-End If
+    Dim x() As String
+    Dim c As Integer
+    Dim q As Double
+    c = Len(Text1.Text)
+    Text1.Text = Left(Text1.Text, c - 1)
+    x = Split(Text1.Text, "/")
+    If Val(x(1)) = 0 Then
+        Text1.Text = "分母不能为0"
+    Else
+        q = Val(x(0)) / Val(x(1))
+        Text1.Text = Text1.Text & "=" & q
+    End If
 End Sub
 
 Private Sub cmdBack_Click()
-If Text1.Text = "" Then
-Text1.Text = ""
-Else
-Text1.Text = Left(Text1.Text, Len(Text1.Text) - 1)
-End If
+    If Text1.Text = "" Then
+        Text1.Text = ""
+    Else
+        Text1.Text = Left(Text1.Text, Len(Text1.Text) - 1)
+    End If
 End Sub
 
 Private Sub cmdDEL_Click()
-Text1.Text = ""
+    Text1.Text = ""
 End Sub
 
 Private Sub cmdeq_Click()
     If InStr(1, Text1.Text, "=") <> 0 Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     ElseIf Right(Text1.Text, 1) = "+" Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     ElseIf Right(Text1.Text, 1) = "-" Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     ElseIf Right(Text1.Text, 1) = "*" Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     ElseIf Right(Text1.Text, 1) = "/" Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     ElseIf Right(Text1.Text, 1) = "=" Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     ElseIf Right(Text1.Text, 1) = "." Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     Else
-    Text1.Text = Text1.Text & "="
-        If InStr(1, Text1.Text, "+") <> 0 Then
-        Call Run1
-        End If
-        If InStr(1, Text1.Text, "-") <> 0 Then
-        Call Run2
-        End If
-        If InStr(1, Text1.Text, "*") <> 0 Then
-        Call Run3
-        End If
-        If InStr(1, Text1.Text, "/") <> 0 Then
-        Call Run4
-        End If
+        Text1.Text = Text1.Text & "="
+            If InStr(1, Text1.Text, "+") <> 0 Then
+                Call Run1
+            End If
+            If InStr(1, Text1.Text, "-") <> 0 Then
+                Call Run2
+            End If
+            If InStr(1, Text1.Text, "*") <> 0 Then
+                Call Run3
+            End If
+            If InStr(1, Text1.Text, "/") <> 0 Then
+                Call Run4
+            End If
     End If
 End Sub
 
 Private Sub cmdfu_Click()
-If InStr(1, Text1.Text, "-") <> 0 Then
-Text1.Text = Right(Text1.Text, Len(Text1.Text) - 1)
-Else
-Text1.Text = "-" & Text1.Text
-End If
+    If InStr(1, Text1.Text, "-") <> 0 Then
+        Text1.Text = Right(Text1.Text, Len(Text1.Text) - 1)
+    Else
+        Text1.Text = "-" & Text1.Text
+    End If
 End Sub
 
 Private Sub cmdExit_Click()
@@ -346,121 +344,119 @@ End Sub
 
 Private Sub cmdjia_Click()
     If Right(Text1.Text, 1) = "" Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     ElseIf Right(Text1.Text, 1) = "+" Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     ElseIf Right(Text1.Text, 1) = "-" Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     ElseIf Right(Text1.Text, 1) = "*" Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     ElseIf Right(Text1.Text, 1) = "/" Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     ElseIf Right(Text1.Text, 1) = "=" Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     ElseIf Right(Text1.Text, 1) = "." Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     Else
-    Text1.Text = Text1.Text & "+"
+        Text1.Text = Text1.Text & "+"
     End If
 End Sub
 
 Private Sub cmdjian_Click()
     If Right(Text1.Text, 1) = "" Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     ElseIf Right(Text1.Text, 1) = "+" Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     ElseIf Right(Text1.Text, 1) = "-" Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     ElseIf Right(Text1.Text, 1) = "*" Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     ElseIf Right(Text1.Text, 1) = "/" Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     ElseIf Right(Text1.Text, 1) = "=" Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     ElseIf Right(Text1.Text, 1) = "." Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     Else
-    Text1.Text = Text1.Text & "-"
+        Text1.Text = Text1.Text & "-"
     End If
 End Sub
 
 Private Sub cmdcheng_Click()
     If Right(Text1.Text, 1) = "" Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     ElseIf Right(Text1.Text, 1) = "+" Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     ElseIf Right(Text1.Text, 1) = "-" Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     ElseIf Right(Text1.Text, 1) = "*" Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     ElseIf Right(Text1.Text, 1) = "/" Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     ElseIf Right(Text1.Text, 1) = "=" Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     ElseIf Right(Text1.Text, 1) = "." Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     Else
-    Text1.Text = Text1.Text & "*"
+        Text1.Text = Text1.Text & "*"
     End If
 End Sub
 
 Private Sub cmdchu_Click()
     If Right(Text1.Text, 1) = "" Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     ElseIf Right(Text1.Text, 1) = "+" Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     ElseIf Right(Text1.Text, 1) = "-" Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     ElseIf Right(Text1.Text, 1) = "*" Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     ElseIf Right(Text1.Text, 1) = "/" Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     ElseIf Right(Text1.Text, 1) = "=" Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     ElseIf Right(Text1.Text, 1) = "." Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     Else
-    Text1.Text = Text1.Text & "/"
+        Text1.Text = Text1.Text & "/"
     End If
 End Sub
 
 Private Sub Command10_Click()
     If Right(Text1.Text, 1) = "" Then
-    Text1.Text = "0."
+        Text1.Text = "0."
     ElseIf Right(Text1.Text, 1) = "+" Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     ElseIf Right(Text1.Text, 1) = "-" Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     ElseIf Right(Text1.Text, 1) = "*" Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     ElseIf Right(Text1.Text, 1) = "/" Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     ElseIf Right(Text1.Text, 1) = "=" Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     ElseIf InStr(1, Text1.Text, ".") <> 0 Then
-    Text1.Text = Text1.Text & ""
+        Text1.Text = Text1.Text & ""
     Else
-    Text1.Text = Text1.Text & "."
+        Text1.Text = Text1.Text & "."
     End If
 End Sub
 
-Private Sub num0_Click()
-    If Text1.Text = "" Then
-        Text1.Text = "0"
-    Else
-        Text1.Text = Text1.Text & "0"
-    End If
-End Sub
 
 Private Sub num1_Click(Index As Integer)
     If Text1.Text = "" Then
-        'MsgBox "0"
         Text1.Text = CStr(Index)
     ElseIf Trim(Text1.Text) = "0" Then
-        'MsgBox "1"
-        Text1.Text = Text1.Text & ""
+        Text1.Text = CStr(Index)
+    ElseIf Right(Text1.Text, 2) = "+0" Then
+        Text1.Text = Left(Text1.Text, Len(Text1.Text) - 1) & CStr(Index)
+    ElseIf Right(Text1.Text, 2) = "-0" Then
+        Text1.Text = Left(Text1.Text, Len(Text1.Text) - 1) & CStr(Index)
+    ElseIf Right(Text1.Text, 2) = "*0" Then
+        Text1.Text = Left(Text1.Text, Len(Text1.Text) - 1) & CStr(Index)
+    ElseIf Right(Text1.Text, 2) = "/0" Then
+        Text1.Text = Left(Text1.Text, Len(Text1.Text) - 1) & CStr(Index)
     Else
-        'MsgBox "2"
         Text1.Text = Text1.Text + CStr(Index)
     End If
 End Sub
